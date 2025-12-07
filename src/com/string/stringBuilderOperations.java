@@ -4,13 +4,25 @@ public class stringBuilderOperations {
 
 	public static void main(String s[]) {
 		
-		reverseAString("Test");
+		stringBuilderOperations strOps = new stringBuilderOperations();
+		strOps.reverseAString("Test");
+		strOps.checkPalindrome("123Gokul");
 	}
 	
 	/* Reverse a String */
-	static void reverseAString(String str) {
+	void reverseAString(String str) {
 		
 		String string = new StringBuilder(str).reverse().toString();
 		System.out.println(string);
+	}
+	
+	/* Palindrome */
+	void checkPalindrome(String str) {
+		
+		String temp = new StringBuilder(str).reverse().toString();
+		if(str.equals(temp))
+			System.out.println(str + " is a palindrome");
+		else
+			System.out.println(str + " is not a palindrome");
 	}
 }
