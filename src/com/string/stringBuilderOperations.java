@@ -7,6 +7,7 @@ public class stringBuilderOperations {
 		stringBuilderOperations strOps = new stringBuilderOperations();
 		strOps.reverseAString("Test");
 		strOps.checkPalindrome("123Gokul");
+		strOps.stringConcat("Gokul ", "Sathya");
 	}
 	
 	/* Reverse a String */
@@ -24,5 +25,11 @@ public class stringBuilderOperations {
 			System.out.println(str + " is a palindrome");
 		else
 			System.out.println(str + " is not a palindrome");
+	}
+	
+	/* Concat a String */
+	void stringConcat(String str, String appendStr) {
+		str = new StringBuilder(str).append(appendStr).toString();
+		System.out.println(str);
 	}
 }
