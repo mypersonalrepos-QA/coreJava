@@ -7,7 +7,7 @@ public class stringOperations {
 		stringOperations strOps = new stringOperations();
 		strOps.reverseAString("Gokul");
 		strOps.checkPalindrome("123mam21");
-		
+		strOps.stringConcat("Gokul ", "Sathya");
 	}
 	
 	/* Reverse a String */
@@ -33,4 +33,9 @@ public class stringOperations {
 			System.out.println(str + " is not a palindrome");
 	}
 	
+	/* Concat a String */
+	void stringConcat(String str, String appendStr) {
+		str = str.concat(appendStr);
+		System.out.println(str);
+	}
 }

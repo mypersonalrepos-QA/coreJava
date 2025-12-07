@@ -7,6 +7,7 @@ public class stringBufferOperations {
 		stringBufferOperations strOps = new stringBufferOperations();
 		strOps.reverseAString("Gokul Test");
 		strOps.checkPalindrome("racecar");
+		strOps.stringConcat("Gokul ", "Sathya");
 	}
 	
 	/* Reverse a String */
@@ -24,5 +25,11 @@ public class stringBufferOperations {
 			System.out.println(str + " is a palindrome");
 		else
 			System.out.println(str + " is not a palindrome");
+	}
+	
+	/* Concat a String */
+	void stringConcat(String str, String appendStr) {
+		str = new StringBuffer(str).append(appendStr).toString();
+		System.out.println(str);
 	}
 }
