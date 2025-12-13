@@ -8,6 +8,7 @@ public class stringBufferOperations {
 		strOps.reverseAString("Gokul Test");
 		strOps.checkPalindrome("racecar");
 		strOps.stringConcat("Gokul ", "Sathya");
+		strOps.countVowelsAndConstants("Java Programming");
 	}
 	
 	/* Reverse a String */
@@ -31,5 +32,18 @@ public class stringBufferOperations {
 	void stringConcat(String str, String appendStr) {
 		str = new StringBuffer(str).append(appendStr).toString();
 		System.out.println(str);
+	}
+	
+	/* Count Vowels and Constants */
+	void countVowelsAndConstants(String s) {
+		char[] charArr = s.toLowerCase().toCharArray();
+		int vowels = 0, constants = 0;
+		for(int i = 0; i < charArr.length; i++) {
+			if(charArr[i] == 'a' || charArr[i] == 'e' || charArr[i] == 'i' || charArr[i] == 'o' || charArr[i] == 'u')
+				vowels++;
+			else
+				constants++;
+		}
+		System.out.println("vowels: " + vowels + ", constants: " + constants);
 	}
 }
